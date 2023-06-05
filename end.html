@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            text-align: center;
+        }
+
+        body {
+            background-color: #f5ffff;
+            font-family: "Tahoma", sans-serif;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="cat.jpeg">
+        <h1>Game End!</h1>
+        <h2 id="final-score"></h2>
+        <h2 id="percentage"></h2>
+        <button id="go-back" onclick="goBack();">Play Again!</button>
+    </div>
+</body>
+
+<script type="text/javascript">
+    const finalScore = sessionStorage.getItem("score");
+    const rounds = sessionStorage.getItem("max-rounds");
+
+    const percentage = (parseInt(finalScore) / parseInt(rounds) * 100).toFixed(2);
+
+    document.getElementById("final-score").innerHTML = `Score: ${finalScore}/${rounds}`;
+    document.getElementById("percentage").innerHTML = `Percent Correct: ${percentage}%`;
+
+    function goBack() {
+        window.location.href = "index.html";
+    }
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            text-align: center;
+        }
+
+        body {
+            background-color: #f5ffff;
+            font-family: "Tahoma", sans-serif;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+
+        select {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="catglasses.png">
+        <h1>Country Guessing Game!</h1>
+        <h2>By Matin & Jordan</h2>
+
+        <label for="regions-selection">Select a region:</label>
+        <select name="regions" id="regions-selection" onchange="regionOnChange();">
+            <option value="Latin America and Caribbean">Americas and Caribbean</option>
+            <option value="Middle East and North Africa">Middle East and North Africa</option>
+            <option value="Sub-Saharan Africa">Sub-Saharan Africa</option>
+            <option value="East Asia and Pacific">East Asia and Pacific</option>
+            <option value="South Asia">South Asia</option>
+            <option value="Europe and Central Asia">Europe and Central Asia</option>
+        </select><br>
+
+        <label for="rounds-selection">Select how many rounds you want to play!</label>
+        <select name="rounds" id="rounds-selection"></select><br>
+
+        <button onclick="playButton();">Play</button><br>
+
+    </div>
+</body>
+<script type="text/javascript" src="index.js"></script>
+
+</html>
